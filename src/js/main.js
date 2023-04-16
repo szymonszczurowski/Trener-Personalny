@@ -1,27 +1,33 @@
 const nav = document.querySelector('.nav')
+const navBurger = document.querySelector('.nav__burger-bars')
+const navItem = document.querySelectorAll('.nav__desktop-item')
 
 const navBtn = document.querySelector('.nav__burger')
-const navBurger = document.querySelector('.nav__burger-bars')
+const navMenu = document.querySelector('.nav__mobile')
+const navMenuItem = document.querySelectorAll('.nav_mobile-box-item')
 
-const navMobileMenu = document.querySelector('.nav__mobile')
-const navMobileLink = document.querySelectorAll('.nav__mobile-link')
+const footerYear = document.querySelector('.footer__year')
 
-const navDesktopLink = document.querySelectorAll('.nav__desktop-link')
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
 
 const handleNav = () => {
-	navMobileMenu.classList.toggle('nav__mobile--active')
+	navMenu.classList.toggle('nav__mobile--active')
 	navBurger.classList.toggle('nav__burger-bars--dark')
 	nav.classList.toggle('nav--white')
 
-	navMobileLink.forEach(item => {
+	navMenuItem.forEach(item => {
 		item.addEventListener('click', () => {
-			navMobileMenu.classList.remove('nav__menu--active')
+			navMenu.classList.remove('nav__mobile--active')
 			navBurger.classList.remove('nav__burger-bars--dark')
 			nav.classList.remove('nav--white')
 		})
 	})
 }
 
+navBtn.addEventListener('click', handleNav)
 
 window.addEventListener('scroll', function () {
 	if (window.scrollY >= 100) {
@@ -29,7 +35,7 @@ window.addEventListener('scroll', function () {
 		navBurger.classList.add('navBurger-style-scroll')
 		navBurger.classList.add('nav__burger-bars--dark-scroll')
 
-		for (const item of navDesktopLink) {
+		for (const item of navItem) {
 			item.classList.add('item-color-one')
 
 			item.addEventListener('mouseover', function () {
@@ -46,7 +52,7 @@ window.addEventListener('scroll', function () {
 		navBurger.classList.remove('navBurger-style-scroll')
 		navBurger.classList.remove('nav__burger-bars--dark-scroll')
 
-		for (const item of navDesktopLink) {
+		for (const item of navItem) {
 			item.classList.remove('item-color-one')
 
 			item.addEventListener('mouseout', function () {
@@ -56,5 +62,4 @@ window.addEventListener('scroll', function () {
 	}
 })
 
-
-navBtn.addEventListener('click', handleNav)
+handleCurrentYear()

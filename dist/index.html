@@ -9,9 +9,9 @@
     <link rel="shortcut icon" href="./img/shortcut.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f66f15b613.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -19,6 +19,7 @@
 <body>
 
     <nav class="nav">
+
         <div class="nav__logo">
             <p>LOGO</p>
         </div>
@@ -32,62 +33,56 @@
         <div class="nav__mobile">
             <div class="nav__mobile-box">
                 <hr>
-                <a href="#" class="nav__mobile-link">home</a>
+                <a href="#" class="nav__mobile-box-item">Strona Główna</a>
                 <hr>
-                <a href="#about-me" class="nav__mobile-link">o mnie</a>
+                <a href="#about-me" class="nav__mobile-box-item">O mnie</a>
                 <hr>
-                <a href="#offers" class="nav__mobile-link">oferta</a>
+                <a href="#offers" class="nav__mobile-box-item">Oferta</a>
                 <hr>
-                <a href="#contact" class="nav__mobile-link">kontakt</a>
-                <hr>
+                <a href="#contact" class="nav__mobile-box-item">Kontakt</a>
             </div>
         </div>
 
         <div class="nav__desktop">
-            <div class="nav__desktop-box"></div>
-            <hr>
-            <a href="#" class="nav__desktop-link">home</a>
-            <hr>
-            <a href="#about-me" class="nav__desktop-link">o mnie</a>
-            <hr>
-            <a href="#offers" class="nav__desktop-link">oferta</a>
-            <hr>
-            <a href="#contact" class="nav__desktop-link">kontakt</a>
-            <hr>
+            <a href="#" class="nav__desktop-item ">Strona Główna</a>
+            <a href="#about-me" class="nav__desktop-item">O mnie</a>
+            <a href="#offers" class="nav__desktop-item">Oferta</a>
+            <a href="#contact" class="nav__desktop-item">Kontakt</a>
         </div>
     </nav>
 
-    <header class="header">
+    <header class="headers">
+                <div class="headers__boxes">
+                    <div class="headers__box headers__box--first">
+                        <p class="headers__box-text">trener</p>
+                        <p class="headers__box-text">personalny</p>
+                        <p class="headers__box-text">gdańsk</p>
+                        <a href="#offers" class="headers__box-btn">zobacz ofertę</a>
+                    </div>
 
-        <div class="header__boxes">
-            <div class="header__box header__box--first">
-                <p class="header__box-text">trener</p>
-                <p class="header__box-text">personalny</p>
-                <p class="header__box-text">gdańsk</p>
-                <a href="#offers" class="header__box-btn">zobacz ofertę</a>
-            </div>
-            <!-- <div class="header__box header__box--second">
-                <div class="header__boxes-text">ćwiczenia</div>
-                <div class="header__boxes-text">i plany</div>
-                <div class="header__boxes-text">treningowe</div>
-                <a href="#offers">zobacz ofertę</a>
-            </div>
-            <div class="header__box header__box--third">
-                <div class="header__boxes-text">prowadzenie</div>
-                <div class="header__boxes-text">treningów</div>
-                <a href="#offers">zobacz ofertę</a>
-            </div>
-        </div> -->
-    </header>
+                    <div class="headers__box headers__box--second">
+                        <p class="headers__box-text">ćwiczenia </p>
+                        <p class="headers__box-text">i plany</p>
+                        <p class="headers__box-text">treningowe</p>
+                        <a href="#offers" class="headers__box-btn">zobacz ofertę</a>
+                    </div>
+
+                    <div class="headers__box headers__box--third">
+                        <p class="headers__box-text">prowadzenie</p>
+                        <p class="headers__box-text">treningów</p>
+                        <a href="#offers" class="headers__box-btn">zobacz ofertę</a>
+                    </div>  
+                </div>
+        </header>
 
     <main class="main">
         <div class="wrapper">
             <section class="about-me section-padding" id="about-me">
-                <h2 class="section-title" data-aos="fade-down">o mnie</h2>
+                <h2 class="section-heading" data-aos="fade-down">o mnie</h2>
 
                 <div class="about-me__boxes">
 
-                    <div class="about-me__box about-me__box-first">
+                    <div class="about-me__box about-me__box--first">
                         <div class="about-me__box-description">
                             <h3 class="about-me__box-description-title">Doświadczenie</h3>
                             <p class="about-me__box-description-text">Jestem doświadczonym trenerem personalnym z wieloletnim stażem. Pomagam ludziom osiągać ich cele fitness i poprawiać zdrowie poprzez indywidualne treningi i doradztwo dietetyczne..
@@ -98,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="about-me__box about-me__box-second">
+                    <div class="about-me__box about-me__box--second">
                         <div class="about-me__box-description">
                             <h3 class="about-me__box-description-title">Profesjonalizm</h3>
                             <p class="about-me__box-description-text">Jestem profesjonalnym trenerem personalnym o wysokich kwalifikacjach i doświadczeniu. Dbam o bezpieczeństwo i skuteczność treningów moich klientów. Jestem punktualny i rzetelny w swoich obowiązkach
@@ -109,7 +104,7 @@
                         </div>
                     </div>
 
-                    <div class="about-me__box about-me__box-third">
+                    <div class="about-me__box about-me__box--third">
                         <div class="about-me__box-description about-me__box-description--first">
                             <h3 class="about-me__box-description-title">Jakość</h3>
                             <p class="about-me__box-description-text">Prowadzę wysokiej jakości treningi personalne, dostosowane do indywidualnych potrzeb i możliwości moich klientów. Staram się zawsze dostarczać ciekawych i skutecznych programów treningowych. 
@@ -130,14 +125,183 @@
                             <img src="../img/about-4.jpg" alt="Kilka stsów monet ułozynych na stole">
                         </div>
                     </div>
-                    
-                </div>         
+    
+                </div>   
+                
+                
             </section>
-
         </div>
-    </main>
+            <section class="offers section-padding" id="offers">
+                <div class="block block-right"></div>
+                <div class="block block-left block-left--dark"></div>
+         
+                <div class="wrapper">
+                    <h2 class="section-heading" data-aos="fade-down">Oferta</h2>
+                    <p class="offers__text offers__depicition" data-aos="fade-down">Oferuje indywidualne treningi personalne, pakiety treningowe oraz zajęcia grupowe dla osób chcących poprawić swoją formę fizyczną i osiągnąć założone cele. Datkowymi atutami mojej oferty jest <b>wsparcie dietetyczne oraz dostęp do specjalistycznego sprzętu</b>. Treningi grupowe to także świetna okazja do zmotywowania się do <b>regularnej aktywności fizycznej</b> i poznania nowych ludzi o podobnych zainteresowaniach.</p>
+        
+                    <div class="offers__content" data-aos="zoom-in">
+        
+                    <div class="offers__box diagonal-lines">
+                        <div class="offers__img">
+                            <img src="../img/offers-1.jpg" alt="Kobieta wykonująca ćwiczenie przy pomocy dwóch sznurów">
+                        </div>
+        
+                        <div class="offers__description">
+                            <h3 class="offers__title">Pojedynczy trening</h3>
+                            <p class="offers__text">Oferuję indywidualne treningi personalne, <b>dostosowane do potrzeb i możliwości</b> moich klientów.</p>
+                            <hr>
+                            <p class="offers__text">Pomagam w osiągnięciu założonych celów, takich jak <b> poprawa wydolności fizycznej, zwiększenie siły i masy mięśniowej, czy redukcja tkanki tłuszczowej</b></p>
+                            <hr>
+                            <p class="offers__text">Posiadam <b>szerokie doświadczenie i wiedzę z zakresu treningu i odżywiania</b>, dzięki czemu mogę doradzić w kwestiach dotyczących zdrowego trybu życia.</p>
+                            <hr>
+                            <p class="offers__text">Do każdego klienta podchodzę <b>indywidualnie</b>, starając się zrozumieć jego potrzeby i oczekiwania.</p>
+                            <hr>
+                            <p class="offers__text">Oferuję różnorodne formy treningu, takie jak <b>trening siłowy, trening cardio, czy trening funkcjonalny</b>, dostosowane do preferencji i możliwości każdego z moich klientów.</p>
+                            <div class="offers__price"><span> 100 zł </span></div>
+                        </div>
+                    </div>
+        
+                    <div class="offers__box offers__box-middle diagonal-lines">
+                        <div class="offers__img">
+                            <img src="../img/offers-2.jpg" alt="Kobieta pokazujące umięśnione ręce">
+                        </div>
+        
+                        <div class="offers__description">
+                            <h3 class="offers__title">Pakiet treningów</h3>
+                            <p class="offers__text">Pakiet treningów składa się z <b>12 indywidualnych sesji treningowych</b>.</p>
+                            <hr>
+                            <p class="offers__text">Każda sesja trwa około 60 minut i jest <b>dostosowana do poziomu</b> zaawansowania i celów moich klientów.</p>
+                            <hr>
+                            <p class="offers__text"> W ramach pakietu oferuje także <b>dostęp do specjalistycznego sprzętu treningowego</b> oraz pomoc w kwestiach dotyczących odżywiania.</p>
+                            <hr>
+                            <p class="offers__text">Po zakończeniu pakietu treningów, oferuje <b>możliwość przedłużenia współpracy</b> lub skorzystania z pojedynczych sesji treningowych.</p>
+                            <hr>
+                            <p class="offers__text">W trakcie trwania pakietu treningów stale <b>monitoruję postępy moich klientów</b> i dostosowuję plan treningowy do ich aktualnych potrzeb i celów.</p>
+                            <div class="offers__price"><span>900 zł</span> </div>
+                        </div>
+                    </div>
+        
+                    <div class="offers__box diagonal-lines">
+                        <div class="offers__img">
+                            <img src="../img/offers-3.jpg" alt="Grupa mężczyzn spoglądająca na mężczyzne podnoszące sztangę">
+                        </div>
+        
+                        <div class="offers__description">
+                            <h3 class="offers__title">Trening w grupie</h3>
+                            <p class="offers__text"> Oferuje <b>zajęcia grupowe</b> dla osób chcących aktywnie spędzić czas i poprawić swoją formę fizyczną.</p>
+                            <hr>
+                            <p class="offers__text"><b>Treningi grupowe odbywają się raz w tygodniu</b> i trwają około 60 minut.</p>
+                            <hr>
+                            <p class="offers__text">W trakcie treningu <b>wykorzystujemy różnorodne akcesoria</b> i sprzęt, takie jak hantle, kettlebell, gumy oporowe, czy piłki lekarskie.</p>
+                            <hr>
+                            <p class="offers__text">Treningi grupowe to świetna <b>okazja do zmotywowania się do regularnej aktywności fizycznej</b> i poznania nowych ludzi o podobnych zainteresowaniach.</p>
+                            <hr>
+                            <p class="offers__text">Treningi grupowe są <b>dostosowane do różnych poziomów zaawansowania</b>, dzięki czemu każdy znajdzie coś dla siebie.</p>
+                            <div class="offers__price"><span>60 zł</span></div>
+                        </div>
+                    </div>           
+                </div>
+            </section>
+        
+        
+            <section class="contact section-padding" id="contact">
+              
+                <div class="wrapper" data-aos="zoom-in">
+                    
+                <h2 class="contact__logo contact__logo-first">logo</h2>
+                <div class="contact__info">
+                    <h2 class="contact__logo contact__logo-second">logo</h2>
+                    <p class="contact__data"><i class="fa-solid fa-mobile-screen"></i>+48 000 000 000</p>
+                    <p class="contact__data"><i class="fa-sharp fa-solid fa-location-dot"></i>Szewska 12/3, Gdańsk</p>
+                    <p class="contact__social">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a  href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a  href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    </p>
+        
+                </div>
+                     <hr>
+                <div class="contact__box">
+                    <h2 class="contact__heading">kontakt</h2>
+                    <form action="https://formspree.io/f/mdojqbwr" method="POST">
+                        <label class="contact__name" for="">Imię:</label>
+                        <input class="contact__input" type="text" name="Name" placeholder="Imię" required>
+                        <label class="contact__name" for="">Email:</label>
+                        <input class="contact__input" type="email" name="Email" placeholder="Email" required>
+                
+                        <label class="contact__name" for="">Wiadomość:</label>
+                        <textarea class="contact__input" name="Message" placeholder="Wiadomość"></textarea>
+        
+                        <button class="contact__btn" type="submit" onclick="document.getElementById('contact').reset();"><span>Wyślij</span><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            </section>
+        
+        
+        <section class="opinions section-padding" id="opinions ">
+            <div class="block block-right block-right--dark"></div>
+                    <h2 class="section-heading" data-aos="fade-down">Opinie</h2>
+                    <div class="wrapper">
+        
+                        <div class="opinions__boxes" data-aos="zoom-in">
+                            <div class="opinions__box">
+                                <div class="opinions__box-img">
+                                    <img src="../img/opinions-1.jpg" alt="">
+                                </div>
+                                <p class="opinions__box-icon"><i class="fa-solid fa-quote-right"></i></p>
+                                <p class="opinions__box-text">Trener personalny był niezwykle pomocny i profesjonalny podczas naszych treningów. Jego wiedza i doświadczenie były nieocenione, a on sam zawsze był pełen entuzjazmu i motywacji. Polecam go z czystym sumieniem!</p>
+                                <p class="opinions__box-name"><strong>Kasia Kowalska</strong> </p>
+                            </div>
+        
+                            <div class="opinions__box">
+                                <div class="opinions__box-img">
+                                    <img src="../img/opinions-2.jpg" alt="">
+                                </div>
+                                <p class="opinions__box-icon"><i class="fa-solid fa-quote-right"></i></p>
+                                <p class="opinions__box-text">Trener personalny to prawdziwy skarb! Jego indywidualne podejście do każdego klienta sprawiło, że miałam poczucie, że pracuję nad moimi celami w sposób specjalnie dla mnie dopasowany. Efekty były widoczne już po kilku tygodniach, a ja czuję się silniejsza i bardziej pewna siebie niż kiedykolwiek wcześniej.</p>
+                                <p class="opinions__box-name"><strong>Jan Nowak</strong> </p>
+                            </div>
+        
+                            <div class="opinions__box">
+                                <div class="opinions__box-img">
+                                    <img src="../img/opinions-3.jpg" alt="">
+                                </div>
+                                <p class="opinions__box-icon"><i class="fa-solid fa-quote-right"></i></p>
+                                <p class="opinions__box-text">Trener personalny to wyjątkowa osoba, która zawsze potrafi znaleźć sposób na to, by zmotywować mnie do działania. Jego treningi są różnorodne i interesujące, a on sam jest bardzo cierpliwym i wyrozumiałym nauczycielem. Nie wyobrażam sobie lepszego trenera niż on!</p>
+                                <p class="opinions__box-name"><strong>Maria Kowalska</strong> </p>
+                            </div>
+        
+                            <div class="opinions__box">
+                                <div class="opinions__box-img">
+                                    <img src="../img/opinions-4.jpg" alt="">
+                                </div>
+                                <p class="opinions__box-icon"><i class="fa-solid fa-quote-right"></i></p>
+                                <p class="opinions__box-text">Zawsze jest punktualny, uważnie słucha moich potrzeb i dostosowuje treningi do moich możliwości. Dzięki jego pomocy znacznie poprawiłam swoją kondycję i wytrzymałość, a także osiągnęłam wiele osobistych sukcesów. Jestem bardzo zadowolona z naszej współpracy i polecam go innym bez wahania.</p>
+                                <p class="opinions__box-name"><strong>Milena Wrońska</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+        
+        </main>
+        
+            <footer class="footer">
+                <p class="footer__text"><span class="footer__name">Copyrights</span> &copy; <span class="footer__year"> </span> <a class="footer__name" href="#">Szymon Szczurowski</a></>
+            </footer>
+        
 
-    <script src="./js/main.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script src="./js/aos.min.js"></script>
+            <script src="./js/slick.min.js"></script>
+            <script src="./js/main.min.js"></script>
 </body>
 
 </html>

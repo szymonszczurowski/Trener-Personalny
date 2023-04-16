@@ -1,19 +1,21 @@
 @use '../utilities/colors' as *;
 
 .wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 1em;
+	padding-bottom: 4em;
+	width: 100%;
+	max-width: 1500px;
 }
 
 .section-padding {
-	padding: 4em 2em;
+	padding: 10em 1em;
 }
 
-.section-title {
+.section-heading {
 	position: relative;
-    margin-bottom: 1em;
-	font-size: 3.5rem;
+	margin-bottom: 2em;
+	font-size: 5rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	text-align: center;
@@ -21,3 +23,60 @@
 	color: $heading-color;
 }
 
+.diagonal-lines {
+	width: 100%;
+	height: 100%;
+	background-image: repeating-linear-gradient(
+		20deg,
+		transparent,
+		transparent 10px,
+		rgba(85, 84, 82, 0.11) 5px,
+		rgba(236, 189, 118, 0.116) 14px
+	);
+}
+
+section {
+	overflow: hidden;
+}
+
+.block {
+	position: absolute;
+	height: 50px;
+	width: 40%;
+	background-color: $body-bgc;
+
+	&-left {
+		bottom: 0;
+		left: -50px;
+		transform: skew(60deg);
+		&--dark {
+			background-color: $background-dark;
+		}
+	}
+
+	&-right {
+		top: 0;
+		right: -50px;
+		transform: skew(60deg);
+
+		&--dark {
+			background-color: $background-dark;
+		}
+	}
+}
+
+.nav-style-scroll {
+	color: $item-color !important;
+	background-color: $main-color;
+}
+
+.navBurger-style-scroll {
+	border-color: $item-color;
+}
+
+.item-color-one {
+	color: $item-color !important;
+}
+.item-color-two {
+	color: $orange-dark;
+}

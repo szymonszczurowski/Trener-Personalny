@@ -1,0 +1,75 @@
+@use '../utilities/colors' as *;
+
+@media (min-width: 1200px) {
+	.nav {
+		padding: 2em 10em 2em 10em;
+	}
+
+	.headers {
+		&__box {
+			// display: flex;
+			// align-items:flex-start;
+			padding-left: 20em;
+
+			&-text {
+				font-size: calc(11vmin + 8 * (5vw - 500px) / 400);
+			}
+
+			&-btn {
+				font-size: 3rem;
+				margin-top: 1.5em;
+				padding: 0.5em 1em;
+			}
+		}
+	}
+
+	.offers {
+		&__description {
+			min-height: 720px;
+		}
+
+		&__box {
+			max-width: 360px;
+		}
+
+		&__img {
+			img {
+				height: 400px;
+				width: 360px;
+			}
+		}
+	}
+
+	.contact {
+		&__info {
+			margin-right: 15em;
+		}
+	}
+
+	.footer {
+		&__text {
+			font-size: 1.7rem;
+		}
+	}
+
+	.opinions {
+		&__box {
+			min-height: 230px;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.offers {
+		.wrapper {
+			max-width: 1500px;
+		}
+
+		&__box {
+			margin-right: 0;
+			&-middle {
+				margin: 0 10em;
+			}
+		}
+	}
+}

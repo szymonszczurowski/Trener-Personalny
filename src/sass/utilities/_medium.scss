@@ -1,91 +1,272 @@
-@media(min-width: 768px){
-    
-    .header {
+@use '../utilities/colors' as *;
 
-        &__box {
-            &-text {
-                font-size: calc(10vmin + 8 * (5vw - 500px) / 400);
-            }
-        }
-    }
-    .about-me{
-        &__box{
-            height: 600px;
-            &-description{
-                padding: 3em 1em;
+@media (min-width: 768px) {
+	.nav {
+		padding: 2em 2.5em 2em 5em;
+	}
 
-                &-title{
-                    font-size: 2.5rem;
-                }
-                &-text{
-                    margin: 0.5em;
-                    font-size: 1.8rem;
-                }
-            }
-        }
-    }
+	.headers {
+		&__box {
+			padding-left: 8em;
 
-    .section-padding {
-        padding: 5em 4em;
-    }
-    
-    .section-title {
-        margin-bottom: 2em;
-        font-size: 5rem;
+			&-text {
+				font-size: calc(10vmin + 8 * (5vw - 500px) / 400);
+			}
 
-    }
-    
-    
-    
+			&-btn {
+				font-size: 2.5rem;
+				margin-top: 1.5em;
+				padding: 0.5em 1em;
+			}
+		}
+	}
+
+	.about-me {
+		margin-bottom: 10em;
+		&__box {
+			height: 600px;
+			&-description {
+				padding: 3em 1em;
+
+				&-title {
+					font-size: 2.5rem;
+				}
+				&-text {
+					margin: 0.5em;
+					font-size: 1.8rem;
+				}
+
+			}
+		}
+	}
+
+	.offers {
+		background-image: $linear-offers, url('../img/offers-bg-big.jpg');
+
+		&__description {
+			min-height: 810px;
+		}
+
+		&__box {
+			max-width: 345px;
+		}
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__img {
+			img {
+				height: 385px;
+				width: 345px;
+			}
+		}
+	}
+
+	.contact {
+		.wrapper {
+			display: flex;
+			max-width: 1200px;
+		}
+
+		hr {
+			display: none;
+		}
+
+		&__info {
+			display: flex;
+			justify-content: center;
+			margin-right: 6em;
+			width: 30%;
+		}
+
+		&__logo {
+			margin-bottom: 0.5em;
+			font-size: 7rem;
+
+			&-first {
+				display: none;
+			}
+
+			&-second {
+				display: block;
+			}
+		}
+
+		&__data {
+			font-size: 1.5rem;
+		}
+
+		&__box {
+			width: 70%;
+		}
+
+		&__btn {
+			font-size: 1.5rem;
+
+			i {
+				font-size: 2rem;
+			}
+		}
+
+		&__name {
+			margin: 1.5em 0 0.4em 0;
+		}
+
+		&__input {
+			font-size: 1.3rem;
+		}
+	}
+
+	.footer {
+		&__text {
+			font-size: 1.5rem;
+		}
+	}
+
+	.opinions {
+		&__box {
+			min-height: 307px;
+		}
+	}
 }
 
-@media(min-width: 992px){
+@media (min-width: 992px) {
+	.nav {
+		padding: 2em 5em 2em 5em;
 
-    .about-me{
-        &__boxes{
-            grid-template-columns: repeat(2, 1fr);
-        }
-    
-        &__box{
-            grid-template-columns: repeat(2, 1fr);
-            height: 300px;
+		&__mobile {
+			display: none;
+		}
 
-            &-description{
-                padding: 2em 1em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-    
-                &-title{
-                    font-size: 2.3rem;
-                }
-                &-text{
-                    font-size: 1.4rem;
-                }
+		&__burger {
+			display: none;
+		}
 
-                &--first{
-                    grid-column: 2/4;
-                }
-                &--second{
-                    grid-column: 2/4;
-                }
-            } 
+		&__desktop {
+			display: block;
+		}
 
-            &-img{
-                &--first{
-                    grid-row: 1/2;
-                }
-                &--second{
-                    grid-row: 1/2;
-                }
-            }
-        }
-    }
+		&__desktop-item {
+			position: relative;
+			padding: 0.2em 1em;
+			font-size: 1.6rem;
+			text-decoration: none;
+			font-weight: 500;
+			color: $main-color;
+			transition: color 0.3s;
 
-    .about-me__box-img--first{
-background-color: red;    
-    }
-    
+			&:hover {
+				color: $orange-dark;
+			}
+		}
+	}
+
+	.headers {
+		&__box {
+			padding-left: 10em;
+
+			&--zero {
+				display: none;
+			}
+
+			&--carousel {
+				display: block;
+			}
+
+			&--first {
+				background-image: $linear, url('../img/header-big-1.jpg');
+			}
+
+			&--second {
+				background-image: $linear, url('../img/header-big-2.jpg');
+			}
+
+			&--third {
+				background-image: $linear, url('../img/header-big-3.jpg');
+			}
+
+			&-text {
+				font-size: calc(9vmin + 8 * (5vw - 500px) / 400);
+			}
+
+			&-btn {
+				margin-top: 1.5em;
+				padding: 0.5em 1em;
+				font-size: 3rem;
+			}
+		}
+	}
+
+	.about-me {
+		margin-bottom: 0;
+		&__boxes {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__box {
+			grid-template-columns: repeat(2, 1fr);
+			height: 300px;
+
+			&-description {
+				padding: 2em 1em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+
+				&-title {
+					font-size: 2.3rem;
+				}
+				&-text {
+					font-size: 1.4rem;
+				}
+
+				&--first {
+					grid-column: 2/4;
+				}
+				&--second {
+					grid-column: 2/4;
+				}
+			}
+
+			&-img {
+				&--first {
+					grid-row: 1/2;
+				}
+				&--second {
+					grid-row: 1/2;
+				}
+			}
+		}
+	}
+
+	.offers {
+		&__description {
+			padding: 2em;
+			padding-bottom: 10em;
+			min-height: 760px;
+		}
+		&__title {
+			font-size: 2.6rem;
+		}
+
+		&__img {
+			img {
+				height: 400px;
+				width: 360px;
+			}
+		}
+		&__price {
+			font-size: 2rem;
+			span {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.opinions {
+		&__box {
+			min-height: 270px;
+		}
+	}
 }
-
