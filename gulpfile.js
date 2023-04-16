@@ -21,9 +21,6 @@ const clean = require('gulp-clean');
 const browserSync = require('browser-sync').create();
 // const reload = browserSync.reload;
 
-
-
-
 const paths = {
     indexHTML: './dist/*.html',
     html: './src/html/**/*.kit',
