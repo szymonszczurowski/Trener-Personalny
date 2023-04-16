@@ -1,0 +1,17 @@
+@media(min-width: 576px){
+    .header {
+        &__box {
+
+            padding-left: 6em;
+
+        }
+    }
+    
+    .about-me{
+        &__box{
+            height: 500px;
+        }
+    }
+    
+    
+}

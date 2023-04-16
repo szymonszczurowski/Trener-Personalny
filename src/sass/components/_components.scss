@@ -1,0 +1,23 @@
+@use '../utilities/colors' as *;
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.section-padding {
+	padding: 4em 2em;
+}
+
+.section-title {
+	position: relative;
+    margin-bottom: 1em;
+	font-size: 3.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: $heading-color;
+}
+
