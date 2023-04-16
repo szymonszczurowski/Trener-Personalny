@@ -77,12 +77,12 @@ body {
 	padding: 2em 1.5em 2em 3em;
 	width: 100%;
 	color: $main-color;
-	transition: background-color 1s, color 1s;
-	z-index: 10000;
+	transition: background-color .5s, color .5s;
+	z-index: 1000;
 
     &--white {
-		color: $item-color !important;
-		background-color: $main-color !important;
+		color: $item-color;
+		background-color: $main-color;
 	}
 
     &__logo {
@@ -116,13 +116,13 @@ body {
 		&-bars--dark,
 		&-bars--dark::after,
 		&-bars--dark::before {
-			background-color: $item-color !important;
+			background-color: $item-color;
 		}
 
 		&-bars--dark-scroll,
 		&-bars--dark-scroll::after,
 		&-bars--dark-scroll::before {
-			background-color: $item-color !important;
+			background-color: $item-color;
 		}
 
 		&-bars {
@@ -154,7 +154,7 @@ body {
 		left: 0;
 		width: 100%;
 		background-color: $main-color;
-		transform: translateX(0);
+		transform: translateX(100%);
 		transition: transform 0.3s;
 		z-index: 100;
 
@@ -191,7 +191,7 @@ body {
    
     }
 
-	&-desktop {
+	&__desktop {
 		display: none;
 	}
 }
