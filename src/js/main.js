@@ -1,33 +1,29 @@
 const nav = document.querySelector('.nav')
 const navBurger = document.querySelector('.nav__burger__bars')
-const navItem = document.querySelectorAll('.nav__desktop-item')
+const navDesktopItem = document.querySelectorAll('.nav__desktop-item')
 
 const navBtn = document.querySelector('.nav__burger')
-const navMenu = document.querySelector('.nav__mobile')
-const navMenuItem = document.querySelectorAll('.nav_mobile__box-item')
+const navMobileMenu = document.querySelector('.nav__mobile')
+const navMobileMenuItem = document.querySelectorAll('.nav_mobile__box-item')
 
 const footerYear = document.querySelector('.footer__year')
 
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear()
-	footerYear.innerText = year
-}
 
 const handleNav = () => {
-	navMenu.classList.toggle('nav__mobile--active')
+	navMobileMenu.classList.toggle('nav__mobile--active')
 	navBurger.classList.toggle('nav__burger__bars--dark')
 	nav.classList.toggle('nav--white')
 
-	navMenuItem.forEach(item => {
+	navMobileMenuItem.forEach(item => {
 		item.addEventListener('click', () => {
-			navMenu.classList.remove('nav__mobile--active')
+			navMobileMenu.classList.remove('nav__mobile--active')
 			navBurger.classList.remove('nav__burger__bars--dark')
 			nav.classList.remove('nav--white')
 		})
 	})
 }
 
-navBtn.addEventListener('click', handleNav)
+
 
 window.addEventListener('scroll', function () {
 	if (window.scrollY >= 100) {
@@ -35,7 +31,7 @@ window.addEventListener('scroll', function () {
 		navBurger.classList.add('navBurger-style-scroll')
 		navBurger.classList.add('nav__burger__bars--dark-scroll')
 
-		for (const item of navItem) {
+		for (const item of navDesktopItem) {
 			item.classList.add('item-color-one')
 
 			item.addEventListener('mouseover', function () {
@@ -52,7 +48,7 @@ window.addEventListener('scroll', function () {
 		navBurger.classList.remove('navBurger-style-scroll')
 		navBurger.classList.remove('nav__burger__bars--dark-scroll')
 
-		for (const item of navItem) {
+		for (const item of navDesktopItem) {
 			item.classList.remove('item-color-one')
 
 			item.addEventListener('mouseout', function () {
@@ -62,4 +58,22 @@ window.addEventListener('scroll', function () {
 	}
 })
 
+window.addEventListener('resize', function(){
+	if(window.innerWidth >= 992){
+		nav.classList.remove('nav--white')
+		navMobileMenu.classList.remove('nav__mobile--active')
+	}
+})
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
+
+
+
+
 handleCurrentYear()
+navBtn.addEventListener('click', handleNav)
+

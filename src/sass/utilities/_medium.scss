@@ -23,15 +23,18 @@
 
 	.about-me {
 		margin-bottom: 10em;
+
 		&__box {
 			height: 600px;
+
 			&__description {
 				padding: 3em 1em;
 			}
 
 			&__title {
-				font-size: 2.5rem;
+				font-size: 2rem;
 			}
+
 			&__text {
 				margin: 0.5em;
 				font-size: 1.8rem;
@@ -198,6 +201,7 @@
 
 	.about-me {
 		margin-bottom: 0;
+
 		&__boxes {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -221,7 +225,6 @@
 				}
 			}
 
-			
 			&__title {
 				font-size: 2.3rem;
 			}
@@ -241,11 +244,9 @@
 	}
 
 	.offers {
-
 		&__depicition {
 			font-size: 1.6rem;
 		}
-	
 
 		&__description {
 			padding: 2em;
@@ -264,6 +265,7 @@
 		}
 		&__price {
 			font-size: 2rem;
+			
 			span {
 				font-size: 2rem;
 			}

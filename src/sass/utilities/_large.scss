@@ -1,18 +1,17 @@
 @use '../utilities/colors' as *;
 
 @media (min-width: 1200px) {
+
 	.nav {
 		padding: 2em 10em 2em 10em;
 	}
 
 	.headers {
 		&__box {
-			// display: flex;
-			// align-items:flex-start;
 			padding-left: 20em;
 
 			&__text {
-				font-size: calc(11vmin + 8 * (5vw - 500px) / 400);
+				font-size: calc(11vmin + 8 * (5vw - 700px) / 400);
 			}
 
 			&__btn {
@@ -61,14 +60,11 @@
 
 @media (min-width: 1400px) {
 	.offers {
-		.wrapper {
-			max-width: 1500px;
-		}
-
 		&__box {
 			margin-right: 0;
+			
 			&-middle {
-				margin: 0 10em;
+				margin: 0 5em;
 			}
 		}
 	}

@@ -32,12 +32,13 @@ body {
 	z-index: 10000;
 
 	&--white {
-		color: $item-color !important;
-		background-color: $main-color !important;
+		color: $item-color;
+		background-color: $main-color;
 	}
 
 	&__logo {
 		font-size: 2.5rem;
+
 		p {
 			margin-bottom: 0;
 		}
@@ -116,6 +117,7 @@ body {
 			background-color: $item-color !important;
 		}
 
+
 		&__bars {
 			width: 100%;
 		}
@@ -142,10 +144,6 @@ body {
 		display: none;
 	}
 }
-
-// ------------------------------------------------------
-// HEADER
-// ------------------------------------------------------
 
 .headers {
 	&__box {
@@ -188,7 +186,6 @@ body {
 			font-size: 2rem;
 			text-decoration: none;
 			text-transform: uppercase;
-
 			color: $main-color;
 			background-color: $orange-dark;
 			border-radius: 5px;
@@ -288,7 +285,6 @@ body {
 		margin-right: 2em;
 		max-width: 270px;
 		background-color: $main-color;
-		// border-right: 4px solid $orange-dark;
 	}
 
 	&__description {
@@ -340,6 +336,7 @@ body {
 			width: 270px;
 			object-fit: cover;
 			transition: transform 0.5s ease 0s;
+
 			&:hover {
 				transform: scale(1.2);
 			}
@@ -383,6 +380,7 @@ body {
 		margin-bottom: 1em;
 		font-size: 1.6rem;
 		font-weight: 300;
+
 		i {
 			margin-right: 1em;
 		}
@@ -391,6 +389,7 @@ body {
 	&__social {
 		margin-top: 0.5em;
 		font-size: 2.5rem;
+
 		a {
 			padding-right: 1em;
 			text-decoration: none;
@@ -470,6 +469,7 @@ body {
 
 .opinions {
 	position: relative;
+
 	&__box {
 		position: relative;
 		margin: 5em 2em;
@@ -482,6 +482,7 @@ body {
 		&:hover {
 			transform: scale(0.95);
 		}
+
 		&__img {
 			position: absolute;
 			top: -40px;
@@ -496,6 +497,7 @@ body {
 
 		&__icon {
 			text-align: right;
+
 			i {
 				font-size: 2rem;
 				color: $orange-light;
@@ -540,3 +542,4 @@ body {
 
 @import './utilities/small';
 @import './utilities/medium';
+@import './utilities/large';

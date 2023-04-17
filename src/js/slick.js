@@ -22,6 +22,6 @@ $(document).ready(function () {
 $('.headers__boxes').slick({
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
 
 });
