@@ -57,7 +57,7 @@ body {
 			transform: translateX(0);
 		}
 
-		&-box {
+		&__box {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -87,15 +87,15 @@ body {
 		padding: 1em;
 		cursor: pointer;
 
-		&-box {
+		&__box {
 			position: relative;
 			height: 20px;
 			width: 30px;
 		}
 
-		&-bars,
-		&-bars::after,
-		&-bars::before {
+		&__bars,
+		&__bars::after,
+		&__bars::before {
 			position: absolute;
 			right: 0;
 			height: 2px;
@@ -104,35 +104,35 @@ body {
 			transition: 0.2s;
 		}
 
-		&-bars--dark,
-		&-bars--dark::after,
-		&-bars--dark::before {
+		&__bars--dark,
+		&__bars--dark::after,
+		&__bars--dark::before {
 			background-color: $item-color !important;
 		}
 
-		&-bars--dark-scroll,
-		&-bars--dark-scroll::after,
-		&-bars--dark-scroll::before {
+		&__bars--dark-scroll,
+		&__bars--dark-scroll::after,
+		&__bars--dark-scroll::before {
 			background-color: $item-color !important;
 		}
 
-		&-bars {
+		&__bars {
 			width: 100%;
 		}
-		&-bars::after {
+		&__bars::after {
 			top: 10px;
 			width: 60%;
 		}
 
-		&-bars::before {
+		&__bars::before {
 			top: 20px;
 			width: 30%;
 			transition-delay: 0.1s;
 		}
 
 		&:hover {
-			.nav__burger-bars::after,
-			.nav__burger-bars::before {
+			.nav__burger__bars::after,
+			.nav__burger__bars::before {
 				width: 100%;
 			}
 		}
@@ -148,7 +148,6 @@ body {
 // ------------------------------------------------------
 
 .headers {
-
 	&__box {
 		position: relative;
 		display: flex !important;
@@ -177,13 +176,13 @@ body {
 			background-image: $linear, url('../img/header-big-3.jpg');
 		}
 
-		&-text {
+		&__text {
 			font-size: calc(13vmin + 8 * (5vw - 500px) / 400);
 			text-transform: uppercase;
 			color: $main-color;
 		}
 
-		&-btn {
+		&__btn {
 			margin-top: 1.5em;
 			padding: 0.5em 1em;
 			font-size: 2rem;
@@ -214,22 +213,24 @@ body {
 		position: relative;
 		display: grid;
 		grid-template-columns: 1fr;
-		&-description {
+
+		&__description {
 			padding: 1.5em 1em;
 			text-align: center;
 			background-color: $orange-light;
 			color: $main-color;
-
-			&-title {
-				font-size: 2.2rem;
-			}
-			&-text {
-				margin: 0.5em;
-				font-size: 1.6rem;
-			}
 		}
 
-		&-img {
+		&__title {
+			font-size: 2.2rem;
+		}
+
+		&__text {
+			margin: 0.5em;
+			font-size: 1.6rem;
+		}
+
+		&__img {
 			img {
 				object-fit: cover;
 				width: 100%;
@@ -265,6 +266,7 @@ body {
 	&__depicition {
 		position: relative;
 		text-align: center;
+		font-size: 1.4rem;
 		letter-spacing: 0.5px;
 		color: $main-color;
 	}
@@ -480,7 +482,7 @@ body {
 		&:hover {
 			transform: scale(0.95);
 		}
-		&-img {
+		&__img {
 			position: absolute;
 			top: -40px;
 			left: 30px;
@@ -492,7 +494,7 @@ body {
 			}
 		}
 
-		&-icon {
+		&__icon {
 			text-align: right;
 			i {
 				font-size: 2rem;
@@ -500,12 +502,12 @@ body {
 			}
 		}
 
-		&-text {
+		&__text {
 			margin-top: 2em;
 			font-size: 1.4rem;
 		}
 
-		&-name {
+		&__name {
 			font-size: 1.4rem;
 			margin-top: 0.5em;
 		}
