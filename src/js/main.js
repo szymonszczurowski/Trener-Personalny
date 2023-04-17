@@ -1,13 +1,10 @@
 const nav = document.querySelector('.nav')
 const navBurger = document.querySelector('.nav__burger__bars')
 const navDesktopItem = document.querySelectorAll('.nav__desktop-item')
-
 const navBtn = document.querySelector('.nav__burger')
 const navMobileMenu = document.querySelector('.nav__mobile')
 const navMobileMenuItem = document.querySelectorAll('.nav_mobile__box-item')
-
 const footerYear = document.querySelector('.footer__year')
-
 
 const handleNav = () => {
 	navMobileMenu.classList.toggle('nav__mobile--active')
@@ -22,8 +19,6 @@ const handleNav = () => {
 		})
 	})
 }
-
-
 
 window.addEventListener('scroll', function () {
 	if (window.scrollY >= 100) {
@@ -69,10 +64,6 @@ const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
-
-
-
-
 
 handleCurrentYear()
 navBtn.addEventListener('click', handleNav)
